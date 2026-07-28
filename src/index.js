@@ -42,7 +42,7 @@ const SERVICES = [
   { name: "Ether App", url: "https://ether.lumosdhia.com", group: "Apps" },
 ];
 
-// ——— CRON: Runs every 5 minutes ———
+// ——— CRON: Runs every hour ———
 async function runChecks(env, shouldAlert = false) {
   const results = [];
   // Get historical stats from consolidated KV store
@@ -695,7 +695,7 @@ function renderDashboard(results, lastCheck) {
 
 // ——— Worker Entry Point ———
 export default {
-  // Called by the Cron Trigger every 5 minutes
+  // Called by the Cron Trigger every hour
   async scheduled(event, env, ctx) {
     ctx.waitUntil(runChecks(env, true)); // TRUE = Send alerts
   },
