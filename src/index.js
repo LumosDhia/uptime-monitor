@@ -37,7 +37,9 @@ function computeAllTimeAvailability(daily) {
 // The list of services to check
 const SERVICES = [
   { name: "Main Portfolio", url: "https://lumosdhia.com", group: "Core" },
+  { name: "Portfolio App", url: "https://portfolio.lumosdhia.com", group: "Apps" },
   { name: "EcoSpot App", url: "https://ecospot.lumosdhia.com", group: "Apps" },
+  { name: "Ether App", url: "https://ether.lumosdhia.com", group: "Apps" },
 ];
 
 // ——— CRON: Runs every 5 minutes ———
